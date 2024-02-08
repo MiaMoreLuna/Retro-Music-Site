@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="https://use.typekit.net/bvl0vjq.css">
+    <link rel="stylesheet" href="https://use.typekit.net/rum1zlx.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="../css/about.css">
+
+
+    
+</head>
+
+<body>
+
+    <div class="TopMenu"><nav class="menu">
+       
+        <h3> <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../html/about.html">About</a></li>
+                <li><a href="../html/contact.html">Contact</a></li>
+      </ul> </h3>
+
+
+
+    
+    <h1>What's this all about?</h1>
+    <h3>We're about a true fan experience.</h3>
+
+    <div class="tenor-gif-rock">
+        <video src="media/video/rock-and-roll-rock-bands.mp4">Your browser does not support this video.</video></div>
+
+        <title>Test Your Rock Knowldge</title>
+<style>
+body {
+background-color: rgb(122, 153, 163);
+font-family: Helvetica;
+}
+
+#main {
+width: 80%;
+max-width: 950px;
+border: 1px gray solid;
+margin: auto;
+padding: 10px;
+background-color: white;
+border-radius: 10px;
+}
+
+#header {
+margin-top: 0;
+border: 2px solid black;
+padding: 5px;
+height: 250px;
+background: rgb(136, 24, 24);
+background-image: url(media/images/Stage\ Lights.jpeg);
+color: rgb(16, 14, 14);
+}
+  
+label {
+display: block;
+}
+
+input {
+width: 30px;
+margin-left: 20px;
+}
+
+
+
+button {
+width: 100px;
+margin-top: 20px;
+}
+</style>
+
+
+</head>
+
+<body>
+<div id="main"><!-- open main div -->
+<div id="header"><!-- open header div -->
+<h1>Are You the Real Deal?</h1>
+</div><!-- close header div -->
+
+<h1>Or Are You a Poser?</h1>
+<form id="form1">
+
+<h2>What personal item did Kurt Cobain leave to identify himself before committing suicide?</h2>
+<label for="var_string"><input type="radio" name="variable" value="0" id="var_string" />A picture his daughter drew of him.</label>
+<label for="var_join"><input type="radio" name="variable" value="0" id="var_join" />A pair of his favorite sneakers.</label>
+<label for="var_info"><input type="radio" name="variable" value="25" id="var_info" />His drivers license.</label>
+<label for="var_condition"><input type="radio" name="variable" value="0" id="var_condition"/>A pack of his favorite smokes.</label>
+
+<h2>How many drummers have the Ramones had since their inception?</h2>
+<label for="sub_string"><input type="radio" name="sub" value="25" id="sub_string"/>4</label>
+<label for="sub_join"><input type="radio" name="sub" value="0" id="sub_join"/>3</label>
+<label for="sub_info"><input type="radio" name="sub" value="0" id="sub_info" />2</label>
+<label for="sub_condition"><input type="radio" name="sub" value="0" id="sub_condition" />6</label>
+
+<h2>What world famous band has the longest unchanged lineup of members?</h2>
+<label for="cat_string"><input type="radio" name="con" value="0" id="cat_string" />U2</label>
+<label for="cat_join"><input type="radio" name="con" value="25" id="cat_join" />The Rolling Stones</label>
+<label for="cat_info"><input type="radio" name="con" value="0" id="cat_info" />The Beatles</label>
+<label for="cat_condition"><input type="radio" name="con" value="0" id="cat_condition" />Deep Purple</label>
+
+<h2>Which rock band has sold the most records and never had a #1 hit?</h2>
+<label for="if_string"><input type="radio" name="ifstate" value="0" id="if_string" />Guns N' Roses</label>
+<label for="if_join"><input type="radio" name="ifstate" value="0" id="if_join" />The Eagles</label>
+<label for="if_info"><input type="radio" name="ifstate" value="0" id="if_info" />AC/DC</label>
+<label for="if_condition"><input type="radio" name="ifstate"  value="25" id="if_condition" />Led Zeppelin</label>
+  
+  
+
+
+<button type="submit" value="Submit">Submit</button>
+
+</form>
+
+<p>Your grade is: <span id="grade">__</span></p>
+<p id="grade2"></p>
+</div><!-- close main div -->
+  
+<script>
+// add script here to make quiz interactive
+  document.getElementById("form1").onsubmit=function() {
+    
+     variable = parseInt(document.querySelector('input[name = "variable"]:checked').value);
+	   sub = parseInt(document.querySelector('input[name = "sub"]:checked').value);
+	   con = parseInt(document.querySelector('input[name = "con"]:checked').value);
+	   ifstate = parseInt(document.querySelector('input[name = "ifstate"]:checked').value);
+    
+	   result = variable + sub + con + ifstate; 
+    
+     grading = [
+	   {score:0,feedback:"Are you serious?", image: ""},
+	   {score:25,feedback:"Hmmm? You sure you're not a poser?", image: ""},
+	   {score:50,feedback:"I think you could do better. Try again.", image: ""},
+	   {score:75,feedback:"Not bad. Much respect.", image: "https://cdn.glitch.com/226a2585-6e60-47f3-9a53-6e71abe5f27e%2Fabove.jpg?v=1566659572935"},
+	   {score:100,feedback:"Excellent! You are no poser!", image: ""}
+	   ];
+	  
+for(i=0; i<grading.length; i++) {
+    if(result == grading[i].score) {
+    result2 = grading[i].feedback + "<br>
+	  }
+	  }
+    
+     document.getElementById("grade").innerHTML = result;
+    document.getElementById("grade2").innerHTML = result2; 
+	   
+
+return false; // required to not refresh the page; just leave this here
+  }
+
+
+</script>
+</head>
+
+  
+</body>
+</html>
