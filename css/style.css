@@ -108,4 +108,12 @@ img {
     width: 200px;
     height: 200px;
 }
+.musicplayer
+ {
+    display: block;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
 
